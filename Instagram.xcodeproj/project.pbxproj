@@ -13,6 +13,20 @@
 		F96E98621B375F8300E45990 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96E98611B375F8300E45990 /* Images.xcassets */; };
 		F96E98651B375F8300E45990 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96E98631B375F8300E45990 /* LaunchScreen.xib */; };
 		F96E98711B375F8300E45990 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E98701B375F8300E45990 /* InstagramTests.swift */; };
+		F96E987C1B375FEF00E45990 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E987A1B375FEF00E45990 /* Bolts.framework */; };
+		F96E987D1B375FEF00E45990 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E987B1B375FEF00E45990 /* Parse.framework */; };
+		F96E98811B37603100E45990 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98801B37603100E45990 /* AudioToolbox.framework */; };
+		F96E98831B37603900E45990 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98821B37603900E45990 /* CFNetwork.framework */; };
+		F96E98851B37607000E45990 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98841B37606F00E45990 /* CoreGraphics.framework */; };
+		F96E98871B37607600E45990 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98861B37607600E45990 /* CoreLocation.framework */; };
+		F96E98891B37607C00E45990 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98881B37607C00E45990 /* MobileCoreServices.framework */; };
+		F96E988B1B37608100E45990 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E988A1B37608100E45990 /* QuartzCore.framework */; };
+		F96E988D1B37608700E45990 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E988C1B37608700E45990 /* Security.framework */; };
+		F96E988F1B37608D00E45990 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E988E1B37608D00E45990 /* StoreKit.framework */; };
+		F96E98911B37609200E45990 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98901B37609200E45990 /* SystemConfiguration.framework */; };
+		F96E98931B37609800E45990 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98921B37609800E45990 /* libz.dylib */; };
+		F96E98951B37609E00E45990 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F96E98941B37609E00E45990 /* libsqlite3.dylib */; };
+		F96E98981B37855200E45990 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E98971B37855200E45990 /* AppKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,20 @@
 		F96E986A1B375F8300E45990 /* InstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96E986F1B375F8300E45990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F96E98701B375F8300E45990 /* InstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
+		F96E987A1B375FEF00E45990 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Instagram/Bolts.framework; sourceTree = "<group>"; };
+		F96E987B1B375FEF00E45990 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Instagram/Parse.framework; sourceTree = "<group>"; };
+		F96E98801B37603100E45990 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F96E98821B37603900E45990 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F96E98841B37606F00E45990 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F96E98861B37607600E45990 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F96E98881B37607C00E45990 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F96E988A1B37608100E45990 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F96E988C1B37608700E45990 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F96E988E1B37608D00E45990 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F96E98901B37609200E45990 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F96E98921B37609800E45990 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F96E98941B37609E00E45990 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F96E98971B37855200E45990 /* AppKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +71,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96E98951B37609E00E45990 /* libsqlite3.dylib in Frameworks */,
+				F96E98931B37609800E45990 /* libz.dylib in Frameworks */,
+				F96E98911B37609200E45990 /* SystemConfiguration.framework in Frameworks */,
+				F96E988F1B37608D00E45990 /* StoreKit.framework in Frameworks */,
+				F96E988D1B37608700E45990 /* Security.framework in Frameworks */,
+				F96E988B1B37608100E45990 /* QuartzCore.framework in Frameworks */,
+				F96E98891B37607C00E45990 /* MobileCoreServices.framework in Frameworks */,
+				F96E98871B37607600E45990 /* CoreLocation.framework in Frameworks */,
+				F96E98851B37607000E45990 /* CoreGraphics.framework in Frameworks */,
+				F96E98831B37603900E45990 /* CFNetwork.framework in Frameworks */,
+				F96E98811B37603100E45990 /* AudioToolbox.framework in Frameworks */,
+				F96E987D1B375FEF00E45990 /* Parse.framework in Frameworks */,
+				F96E987C1B375FEF00E45990 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +100,7 @@
 		F96E984C1B375F8300E45990 = {
 			isa = PBXGroup;
 			children = (
+				F96E987F1B37600800E45990 /* Frameworks */,
 				F96E98571B375F8300E45990 /* Instagram */,
 				F96E986D1B375F8300E45990 /* InstagramTests */,
 				F96E98561B375F8300E45990 /* Products */,
@@ -78,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F96E985A1B375F8300E45990 /* AppDelegate.swift */,
+				F96E98971B37855200E45990 /* AppKey.swift */,
 				F96E985C1B375F8300E45990 /* ViewController.swift */,
 				F96E985E1B375F8300E45990 /* Main.storyboard */,
 				F96E98611B375F8300E45990 /* Images.xcassets */,
@@ -110,6 +153,26 @@
 				F96E986F1B375F8300E45990 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F96E987F1B37600800E45990 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F96E98941B37609E00E45990 /* libsqlite3.dylib */,
+				F96E98921B37609800E45990 /* libz.dylib */,
+				F96E98901B37609200E45990 /* SystemConfiguration.framework */,
+				F96E988E1B37608D00E45990 /* StoreKit.framework */,
+				F96E988C1B37608700E45990 /* Security.framework */,
+				F96E988A1B37608100E45990 /* QuartzCore.framework */,
+				F96E98881B37607C00E45990 /* MobileCoreServices.framework */,
+				F96E98861B37607600E45990 /* CoreLocation.framework */,
+				F96E98841B37606F00E45990 /* CoreGraphics.framework */,
+				F96E98821B37603900E45990 /* CFNetwork.framework */,
+				F96E98801B37603100E45990 /* AudioToolbox.framework */,
+				F96E987A1B375FEF00E45990 /* Bolts.framework */,
+				F96E987B1B375FEF00E45990 /* Parse.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96E985D1B375F8300E45990 /* ViewController.swift in Sources */,
+				F96E98981B37855200E45990 /* AppKey.swift in Sources */,
 				F96E985B1B375F8300E45990 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +404,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Instagram",
+				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +418,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Instagram",
+				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
