@@ -16,6 +16,18 @@ class TableViewController: UITableViewController {
     var isFollowing = [String:Bool]()
     
     var refresher:UIRefreshControl!
+    var activityIndicator = UIActivityIndicatorView()
+    
+    func displayAlert(title: String, message: String)
+    {
+        var alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
     
     func refresh()
     {
@@ -63,6 +75,36 @@ class TableViewController: UITableViewController {
                 }
             }
         })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "signOut"
+        {
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            
+            self.activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
+            self.activityIndicator.center = self.view.center
+            self.activityIndicator.hidesWhenStopped = true
+            self.activityIndicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+            self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+            self.view.addSubview(self.activityIndicator)
+            PFUser.logOutInBackgroundWithBlock({ (error) -> Void in
+                
+                if error == nil
+                {
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    self.displayAlert("Sign Out Successful", message: "You have been signed out!")
+                }
+                else
+                {
+                    
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    self.displayAlert("Sign Out Error", message: "Unable to sign out, please try again!")
+                }
+            })
+        }
     }
 
     override func viewDidLoad() {

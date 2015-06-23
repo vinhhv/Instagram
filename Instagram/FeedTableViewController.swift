@@ -7,17 +7,67 @@
 //
 
 import UIKit
+import Parse
 
 class FeedTableViewController: UITableViewController {
+    
+    var imageFiles = [PFFile]()
+    var messages = [String]()
+    var usernames = [String]()
+    var users = [String: String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        var getFollowedUsersQuery = PFQuery(className: "followers")
+        var query = PFUser.query()
+        query?.findObjectsInBackgroundWithBlock({ (objects, error:NSError?) -> Void in
+            
+            if let users = objects
+            {
+                self.usernames.removeAll(keepCapacity: true)
+                self.messages.removeAll(keepCapacity: true)
+                self.imageFiles.removeAll(keepCapacity: true)
+                self.users.removeAll(keepCapacity: true)
+                
+                for object in users
+                {
+                    if let user = object as? PFUser
+                    {
+                        self.users[user.objectId!] = user.username!
+                    }
+                }
+            }
+                
+            getFollowedUsersQuery.whereKey("follower", equalTo: PFUser.currentUser()!.objectId!)
+            getFollowedUsersQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+                
+                if let objects = objects
+                {
+                    for object in objects
+                    {
+                        var followedUser = object["following"] as! String
+                        var query = PFQuery(className: "Post")
+                        
+                        query.whereKey("userId", equalTo: followedUser)
+                        query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+                            if let objects = objects
+                            {
+                                for object in objects
+                                {
+                                    self.imageFiles.append(object["imageFile"] as! PFFile)
+                                    self.messages.append(object["message"] as! String)
+                                    self.usernames.append(self.users[object["userId"] as! String]!)
+                                    
+                                    self.tableView.reloadData()
+                                }
+                            }
+                        })
+                    }
+                }
+                
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,16 +86,22 @@ class FeedTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 3
+        return usernames.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let myCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ImageCell
         
-        myCell.postedImage.image = UIImage(named: "cutiePieKevin.jpg")
-        myCell.username.text = "User 111"
-        myCell.message.text = "Message"
+        imageFiles[indexPath.row].getDataInBackgroundWithBlock { (data, error) -> Void in
+            if let downloadedImage = UIImage(data: data!)
+            {
+                myCell.postedImage.image = downloadedImage
+            }
+        }
+        
+        myCell.username.text = usernames[indexPath.row]
+        myCell.message.text = messages[indexPath.row]
 
         return myCell
     }
