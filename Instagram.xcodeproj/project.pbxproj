@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F93540CA1B38E55C0088B085 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93540C91B38E55C0088B085 /* TableViewController.swift */; };
+		F93540CC1B3915060088B085 /* cutiePieKevin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F93540CB1B3915060088B085 /* cutiePieKevin.jpg */; };
+		F93540CE1B3916AC0088B085 /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93540CD1B3916AC0088B085 /* PostImageViewController.swift */; };
+		F93540D01B392BAC0088B085 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93540CF1B392BAC0088B085 /* ImageCell.swift */; };
+		F93540D21B392D340088B085 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93540D11B392D340088B085 /* FeedTableViewController.swift */; };
 		F96E985B1B375F8300E45990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E985A1B375F8300E45990 /* AppDelegate.swift */; };
 		F96E985D1B375F8300E45990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E985C1B375F8300E45990 /* ViewController.swift */; };
 		F96E98601B375F8300E45990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96E985E1B375F8300E45990 /* Main.storyboard */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F93540C91B38E55C0088B085 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F93540CB1B3915060088B085 /* cutiePieKevin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cutiePieKevin.jpg; sourceTree = "<group>"; };
+		F93540CD1B3916AC0088B085 /* PostImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
+		F93540CF1B392BAC0088B085 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		F93540D11B392D340088B085 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		F96E98551B375F8300E45990 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96E98591B375F8300E45990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F96E985A1B375F8300E45990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +132,12 @@
 				F96E985A1B375F8300E45990 /* AppDelegate.swift */,
 				F96E98971B37855200E45990 /* AppKey.swift */,
 				F96E985C1B375F8300E45990 /* ViewController.swift */,
+				F93540C91B38E55C0088B085 /* TableViewController.swift */,
 				F96E985E1B375F8300E45990 /* Main.storyboard */,
+				F93540D11B392D340088B085 /* FeedTableViewController.swift */,
+				F93540CF1B392BAC0088B085 /* ImageCell.swift */,
+				F93540CD1B3916AC0088B085 /* PostImageViewController.swift */,
+				F93540CB1B3915060088B085 /* cutiePieKevin.jpg */,
 				F96E98611B375F8300E45990 /* Images.xcassets */,
 				F96E98631B375F8300E45990 /* LaunchScreen.xib */,
 				F96E98581B375F8300E45990 /* Supporting Files */,
@@ -256,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96E98601B375F8300E45990 /* Main.storyboard in Resources */,
+				F93540CC1B3915060088B085 /* cutiePieKevin.jpg in Resources */,
 				F96E98651B375F8300E45990 /* LaunchScreen.xib in Resources */,
 				F96E98621B375F8300E45990 /* Images.xcassets in Resources */,
 			);
@@ -275,9 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93540CE1B3916AC0088B085 /* PostImageViewController.swift in Sources */,
 				F96E985D1B375F8300E45990 /* ViewController.swift in Sources */,
 				F96E98981B37855200E45990 /* AppKey.swift in Sources */,
+				F93540D21B392D340088B085 /* FeedTableViewController.swift in Sources */,
 				F96E985B1B375F8300E45990 /* AppDelegate.swift in Sources */,
+				F93540CA1B38E55C0088B085 /* TableViewController.swift in Sources */,
+				F93540D01B392BAC0088B085 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +501,7 @@
 				F96E98761B375F8300E45990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F96E98771B375F8300E45990 /* Build configuration list for PBXNativeTarget "InstagramTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +510,7 @@
 				F96E98791B375F8300E45990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

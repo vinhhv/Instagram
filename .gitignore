@@ -30,3 +30,6 @@ xcshareddata
 
 Pods
 Podfile.lock
+
+# Exclude default image
+*.jpg
